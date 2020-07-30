@@ -9,5 +9,10 @@
         {% csrf_token %}
         {{ form.as_p }}
         <button name='submit'>Save changes</button>
+        <button name='cancel'>Cancel</button>
     </form>
+
+    <p>
+        <a href="{% url 'learning_logs:delete_entry' entry.id %}">Delete entry</a>
+    </p>
 {% endblock content %}
